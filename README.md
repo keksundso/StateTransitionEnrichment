@@ -1,11 +1,12 @@
 
 # StateTransitionEnrichment
 
-To find state transitions which are enriched or depleted in given set of genes (compared to the Background), we analyzed our data via binomial regression in a bayesian framework.
+To find state transitions which are enriched or depleted in given set of genes (compared to the background), we analyzed our data via binomial regression in a bayesian framework.
 
-p(T, GO) = aT + eT*GOT.
+Yt,x ~ binomial(θt,x , Nx) 
+Θt = logistic(αt+βt*Xt) 
 
-This way we are able to compare the probability that a given transition (pT) occurs in a gene which is part of a selected group (e.g. GO-Term) to all annotated genes. This difference is expressed be the effect size (e) and can be interpreted as the log odds ratio. In consequence this means that a negative log odds ratio shows us a depletion of any given transition in our selected group of genes, while a positiv value indicates an enrichment.
+The number of genes with transition t and the condition x (part of the background (x = 0) or the selected group (x = 1)) is Yt,x. It depends on the number of genes in condition x (Nx) and the probability θt,x that a given transition t occurs in a gene which is annotated to one of the two conditions x. The influence of the condition on θ is expressed by the effect size β, which is the log odds ratio. The uncertainty that an enrichment (positive log odds ratio) or a depletion (negative log odds ratio) occurs is represented by the probability that β is either negative or positive, respectively.
 
 
 ## Explaining the Analysis
