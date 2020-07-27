@@ -33,7 +33,7 @@ GOTERMListFunction <- function(GOID, dateiName="notDefined"){
 	}
 	print(paste("Start Search", GOID, dateiName))	
 	
-	GoTermDF <- data.frame(getBM(attributes=c("entrezgene","ensembl_gene_id_version","external_gene_name","go_id"),
+	GoTermDF <- data.frame(getBM(attributes=c("entrezgene_id","ensembl_gene_id_version","external_gene_name","go_id"),
 								 filters=c('go_parent_term'),
 								 values = GOID ,
 								 mart=ensembl))
