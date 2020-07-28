@@ -28,9 +28,9 @@ Tool is build to be run in a  [conda enviroment](https://docs.conda.io/en/latest
 ### Input-Data
 * **ListOfGoTerms** a plain text file, format can be seen in example file **GOthreeComb.go**
 
-* **journal.pone.0000898.s001.csv**, file in puplication  xxx can be retrived from and should be saved in Data folder is lifted to mouse genome, file can be requested. 
+* **journal.pone.0000898.s001.csv**, List of HKG from  https://doi.org/10.1371/journal.pone.0000898 should be saved in Data folder and is lifted to mouse genome (file can be requested). 
 
-* **Jan2020gcsc3.mutations.RData**, file can be requested. 
+* **Jan2020gcsc3.mutations.RData**, Genes and their corresponding transitions (file can be requested). 
 
 ## Executing the code with
     $ snakemake
