@@ -35,7 +35,7 @@ myMod <- function(valueVector){
 #################CODE############################
 
 Ueberschrift <- "PPC of the HKG-Selection Model"
-if (testRun == FALSE) {pdf(outPutPath, width=1500, height=1300)
+if (testRun == FALSE) {pdf(outPutPath)
 	Ueberschrift <- paste("PPC:",basename(snakemake@input[["brmsModleVar"]]))
 	}
 
